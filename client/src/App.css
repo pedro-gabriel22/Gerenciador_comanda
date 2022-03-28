@@ -1,0 +1,277 @@
+
+/* links navbar ------------------------------- */
+.navbar{
+  margin: auto;
+  display: flex;
+  padding: 20px;
+  text-decoration: none;
+  background-color: #001848;
+  
+  color: white;
+  justify-content: flex-end;
+
+}
+.link-navbar{
+  color:rgb(42, 102, 214);
+  margin: 10px;
+  font-size: 18px;
+}
+
+.link-navbar > button{
+  padding: 5px;
+  border-radius: 7px;
+  border: none;
+}
+/*--------------fim  links navbar ------------------------------- */
+
+
+/* mesas ----------------------------- */
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr 1fr ;
+  grid-template-areas: 'form ' 'texto' 'pedido';
+}
+.form{
+  grid-area: form;
+  background-color: rgb(235, 217, 217);
+  display: grid;
+  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-template-rows:1fr  1fr  1fr 2fr ;
+  grid-template-areas: '. . . . . .'  '. inp1 inp2 inp3 inp4 .' '. . . . . .' ' . . btn btn . .' ;
+  
+  
+  
+  column-gap: 20px;
+  row-gap: 10px;
+  
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  
+}
+.form > input {
+  border-radius: 5px;
+  width: 100%;
+  
+  height: 40px;
+
+}
+.inp1{
+grid-area: inp1;
+}
+
+.inp2{
+  grid-area: inp2;
+  }
+  
+.inp3{
+  grid-area: inp3;
+  }
+  
+.inp4{
+  grid-area: inp4;
+  }
+
+.btn{
+  grid-area: btn;
+  background-color: transparent;
+  color: green;
+  border: 3px solid green;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+
+}
+
+.texto{
+  display: grid;
+  grid-area: texto;
+  
+}
+.texto-item{
+  display: grid;
+  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. f g h i j .' ;
+  background-color: antiquewhite;
+  
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+.b1{
+  grid-area: f;
+}
+.b2{
+  grid-area: g;
+}
+.b3{
+  grid-area: h;
+}
+.b4{
+  grid-area: i;
+}
+.b5{
+  grid-area: j;
+}
+.pedido{
+display: grid;
+  grid-area: pedido;
+
+}
+
+.produto-item{
+  display: grid;
+  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. a b c d e .' ;
+  background-color: antiquewhite;
+  border-top: 2px solid black;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+.p1{
+  grid-area: a;
+}
+.p2{
+  grid-area: b;
+}
+.p3{
+  grid-area: c;
+}
+.p4{
+  grid-area: d;
+}
+.p5{
+  grid-area: e;
+}
+/* ------------------- fim  mesas ----------------------------- */
+
+/* cozinha  ------------------------*/
+.all_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'allpedido';
+}
+
+.all_pedido{
+  display: grid;
+  grid-area: allpedido;
+  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-template-rows: 1fr ;
+  grid-template-areas: '. c1 c2 c3 c4 c5 .' ;
+  background-color: #e7e4d5;
+  border-top: 2px solid black;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+
+}
+
+.c1{
+  grid-area: c1;
+}
+.c2{
+  grid-area: c2;
+}
+.c3{
+  grid-area: c3;
+}
+.c4{
+  grid-area: c4;
+}
+.c5{
+  grid-area: c5;
+}
+/* --------------- fim cozinha  ------------------------*/
+
+/* caixa  ------------------------------- */
+ 
+.caixa_container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'caixa_item';
+}
+
+.caixa_item{
+  display: grid;
+  grid-area: caixa_item;
+  grid-template-columns:  1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr;
+  grid-template-areas: '  c2 c3  c5 ' ;
+  background-color: #e7e4d5;
+  border-top: 2px solid black;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.c2{
+  grid-area: c2;
+}
+.c3{
+  grid-area: c3;
+}
+
+.c5{
+  grid-area: c5;
+}
+
+.mesa_caixa{
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #317428;
+  background-color: #36802d;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  width: 100px;
+  height: 100px;
+}
+
+
+/* modal */
+
+.modal_title{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'modal_item';
+}
+.modal_item{
+  display: grid;
+  grid-area: modal_item;
+  grid-template-columns:  1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr;
+  
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+/* modal  */
+/*----------- fim  caixa  ------------------------------- */
