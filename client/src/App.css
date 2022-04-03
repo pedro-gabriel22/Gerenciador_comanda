@@ -1,44 +1,111 @@
 
 /* links navbar ------------------------------- */
-.navbar{
-  margin: auto;
-  display: flex;
-  padding: 20px;
+#root{
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'container1' 'container2';
+}
+.container_pai{
+ width: 250px;
+height: 100vh;
+
+
+}
+
+
+.sidebar{
+  width: 250px;
+  height: 100%;
+  background-color: #1E2020;
+}
+.comands{
+  color: #fff;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* font-family: 'Inter', sans-serif; */
+   /* text-transform: uppercase;  */
+font-style: normal;
+font-weight: 800;
+font-size: 32px;
+
+
+}
+.list_sidebar{
+  align-items: center;
   text-decoration: none;
-  background-color: #001848;
+  list-style: none;
+  display: grid;
+  justify-content: space-between;
+  justify-items: center;
+  margin-top: 20px;
   
-  color: white;
-  justify-content: flex-end;
 
 }
-.link-navbar{
-  color:rgb(42, 102, 214);
-  margin: 10px;
-  font-size: 18px;
-}
-
 .link-navbar > button{
-  padding: 5px;
-  border-radius: 7px;
+  
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  border-radius: 5px;
+  background-color: #424444;
   border: none;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.link-navbar > button:hover{
+  background-color: #555757;
+}
+
 /*--------------fim  links navbar ------------------------------- */
 
 
 /* mesas ----------------------------- */
 .container{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 1fr ;
-  grid-template-areas: 'form ' 'texto' 'pedido';
+  float: left;
+  
+}
+.grid_mesas{
+  display: grid;
+  margin-top: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr ;
+  grid-template-areas: 'grid_mesa1 grid_mesa2 grid_mesa3';
+}
+.grid_mesa1{
+  display: grid;
+  grid-area: grid_mesa1;
+}
+.grid_mesa2{
+  display: grid;
+  grid-area: grid_mesa2;
+}
+.grid_mesa2{
+  display: grid;
+  grid-area: grid_mesa3;
 }
 .form{
   grid-area: form;
-  background-color: rgb(235, 217, 217);
+  background-color: rgb(255, 255, 255);
   display: grid;
-  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-template-columns:0.2fr 3fr 1fr 3fr 0.2fr;
   grid-template-rows:1fr  1fr  1fr 2fr ;
-  grid-template-areas: '. . . . . .'  '. inp1 inp2 inp3 inp4 .' '. . . . . .' ' . . btn btn . .' ;
+  grid-template-areas: 
+   '. . . . .' 
+   '. inp1 inp2  inp4 .'
+   '. . . . .'
+   ' . btn btn btn .' ;
   
   
   
@@ -66,20 +133,16 @@ grid-area: inp1;
   grid-area: inp2;
   }
   
-.inp3{
-  grid-area: inp3;
-  }
-  
 .inp4{
   grid-area: inp4;
   }
 
-.btn{
+.btn-enviar{
   grid-area: btn;
-  background-color: transparent;
-  color: green;
-  border: 3px solid green;
-  width: 150px;
+  background-color: #07D703;
+  color: white;
+  border: 3px solid #07D703;
+  width: 180px;
   height: 50px;
   border-radius: 10px;
 
@@ -156,23 +219,101 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .p5{
   grid-area: e;
 }
+
+.btnMesas{
+width: 150px;
+height: 150px;
+background-color: transparent;
+border: 3px solid #07D703;
+display: grid;
+padding: 5px;
+justify-items: start;
+}
+.stylemesa1{
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border: 3px solid #07D703;
+  display: grid;
+  padding: 5px;
+  justify-items: start;
+  }
+  .stylemesa2{
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border: 3px solid #d70303;
+    display: grid;
+    padding: 5px;
+    justify-items: start;
+    }
+    .stylemesa1 > p{
+      width: 50px;
+      height: 50px;
+      background-color: #07D703;
+      color: white;
+      display: grid;
+      align-items: center;
+      font-size: 18px;
+      
+      
+    }
+    .numMesa{
+      width: 50px;
+      height: 50px;
+      background-color: #07D703;
+      color: white;
+      display: grid;
+      align-items: center;
+      font-size: 18px;
+      
+    }
+    .stylemesa2 > p{
+  width: 50px;
+  height: 50px;
+  background-color: #d70303;
+  color: white;
+  display: grid;
+  align-items: center;
+  font-size: 18px;
+  
+  
+}
 /* ------------------- fim  mesas ----------------------------- */
 
 /* cozinha  ------------------------*/
 .all_container{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'allpedido';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:  1fr;
+  grid-template-areas: ' all_container_filho ';
+  /* border: 1px solid red; */
+  /* padding-top: 100px; */
+  margin: 100px 100px 100px 0;
+  /* background-color: ; */
+  border-radius: 20px;
+  
 }
-
+/*  */
+.all{
+  padding: 30px;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+;
+}
 .all_pedido{
+  
   display: grid;
-  grid-area: allpedido;
-  grid-template-columns:0.2fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
+  grid-area: all_pedido;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-template-rows: 1fr ;
-  grid-template-areas: '. c1 c2 c3 c4 c5 .' ;
-  background-color: #e7e4d5;
+  grid-template-areas: ' c1 c2 c3 c5 ' ;
+  background-color: #ffffff;
   border-top: 2px solid black;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
@@ -186,6 +327,18 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 .c1{
   grid-area: c1;
+  width: 50px;
+      height: 50px;
+      background-color: #07D703;
+      color: white;
+      display: grid;
+      align-items: center;
+      font-size: 18px;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-content: space-evenly;
+      align-items: center;
+    
 }
 .c2{
   grid-area: c2;
@@ -193,9 +346,7 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .c3{
   grid-area: c3;
 }
-.c4{
-  grid-area: c4;
-}
+
 .c5{
   grid-area: c5;
 }
@@ -213,10 +364,10 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .caixa_item{
   display: grid;
   grid-area: caixa_item;
-  grid-template-columns:  1fr 1fr 1fr 1fr ;
+  grid-template-columns:   1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: '  c2 c3  c5 ' ;
-  background-color: #e7e4d5;
+  grid-template-areas: '  c2 c3 c4 c5 .' ;
+  
   border-top: 2px solid black;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-transform: uppercase;
@@ -227,11 +378,18 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-items: center;
 }
 
+.c1{
+  grid-area: c1;
+}
 .c2{
   grid-area: c2;
 }
 .c3{
   grid-area: c3;
+}
+
+.c4{
+  grid-area: c4;
 }
 
 .c5{
@@ -274,4 +432,20 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-items: center;
 }
 /* modal  */
+
+
+.element.style {
+  background-color: none;
+}
+.divpai > Modal {
+  background-color: none !important;
+}
+.ReactModal__Body--open{
+  background-color: none !important;
+
+}
+.ReactModal__Overlay {
+  background-color: none !important;
+
+}
 /*----------- fim  caixa  ------------------------------- */

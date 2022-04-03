@@ -22,14 +22,14 @@ const customStyles = {
    
   },
 };
-function Mesa3() {
+function Mod() {
 
 
   const [campoPrato,setCampoPrato] = useState('')
   const [campoQuantidade,setCampoQuantidade] = useState(1)
   const [campoDescricao,setCampoDescricao] = useState('')
   const [campoAdicional,setCampoAdicional] = useState('')
-  const [numMesa,setNumMesa] = useState(3)
+  const [numMesa,setNumMesa] = useState(1)
  
   
   const [cormesa,setCorMesa] =useState(true)
@@ -72,7 +72,7 @@ const addPedido = () =>{
   return (
     <div className='divpai'>
    
-    <button className={testadorMesa} onClick={openModal}><p>3</p></button>
+    <button className={testadorMesa} onClick={openModal}><p>mod</p></button>
     <Modal
     //  className='modalStyle'
       isOpen={modalIsOpen}
@@ -119,4 +119,4 @@ const addPedido = () =>{
   );
 }
 
-export default Mesa3;
+export default Mod;

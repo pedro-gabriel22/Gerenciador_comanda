@@ -7,9 +7,12 @@ import {ModalProvider} from './Modal_context'
 const Caixa = () =>{
     return(
         <ModalProvider>
-        <HomePage1/>
-        <HomePage2/>
-        <HomePage3/>
+            <div className="grid_mesas">
+            <HomePage1/>
+            <HomePage2/>
+            <HomePage3/>
+            </div>
+        
         <Modal_Component/>
     
         </ModalProvider>

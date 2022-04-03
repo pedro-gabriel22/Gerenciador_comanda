@@ -12,43 +12,42 @@ useEffect(()=>{
       
     })
   },[])
-  const pedidomesa3 = list.filter(list =>list.numeroMesa === 3)
-   
+  const pedidomesa1 = list.filter(list =>list.numeroMesa === 3)
+  
 
-    const {openModal} = useModalContext()
-    const abrirModal = () =>{openModal({message:
-        <div>
-        {pedidomesa3.map((val,key)=>{
 
-          if(val.prato === 'pizza'){
-            var valor = 10
+  const {openModal} = useModalContext()
+  const abrirModal = () =>{openModal({message:
+      <div>
+      {pedidomesa1.map((val,key)=>{
+        if(val.prato === 'pizza'){
+          var valor = 10
 
-          } else if(val.prato === 'lasanha'){
-            valor = 13
-          }else{
-            valor = 8
-          }
-          return(
+        } else if(val.prato === 'lasanha'){
+          valor = 13
+        }else{
+          valor = 8
+        }
+        return(
+          <div>
+        
+          <div  className="caixa_item" key={key}>
           
-            <div>
-          
-            <div  className="caixa_item" key={key}>
-            
-            <p className="c2">{val.prato}</p>
-            <p className="c3">{val.quantidade }</p>
-            
-            <p className="c5">{val.adicional}</p>
-            <p >{valor}</p>
-            </div>
-            </div>
-          )
-        })}
-      </div>
-    })}
+          <p className="c2">{val.prato}</p>
+          <p className="c3">{val.quantidade }</p>
+          <p className="c4">{val.adicional}</p>
+          <p className="c5" >R$ {valor}</p>
+          </div>
+          </div>
+        )
+      })}
+    </div>
+  })}
+  
     return(<>
     <div>
-    
-        <button className="mesa_caixa" onClick={abrirModal}>mesa 3</button>
+    <button className="btnMesas" onClick={abrirModal}><p className="numMesa">3</p></button>
+
     </div>
 
     
