@@ -1,6 +1,6 @@
 # Gerenciador comanda
-<br/>
 ![comands](https://user-images.githubusercontent.com/75812324/173676820-ed5276ba-eec0-429b-a111-4462cfca9b55.png)
+
 
 ## Descrição
 <p>
